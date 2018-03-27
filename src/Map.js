@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import './Map.css';
 
-import {Layers} from './Layers/Layers';
-import {layer} from './Layers/index';
 
 import ol_Map from 'ol/map';
 import ol_View from 'ol/view';
@@ -14,9 +12,12 @@ import ol_OSM from 'ol/source/osm';
 import $ from 'jquery';
 
 class Map extends Component {
-  map = ol_Map;
+  constructor(props) {
+    super(props);
+    console.log('Map Constructor');
+  }
 
-  layers = [];
+  map = ol_Map;
 
   options = {
     pixelRation: undefined,
@@ -50,11 +51,6 @@ class Map extends Component {
     'propertychange': undefined,
     'singleclick': undefined
   };
-
-  constructor(props) {
-    super(props);
-    console.log('Map Constructor');
-  }
 
   render() {    
     return (

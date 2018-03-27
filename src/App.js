@@ -14,22 +14,35 @@ class App extends Component {
 	constructor(){
 		super();
 		this.state={
-			render: ''
+			render: []
 		}
 	}
 
 	handleClick(componentName, e){
-		console.log(componentName);
-		this.setState({render:componentName});
+		var tmp = this.state.render.slice();
+		if(tmp.length > 0){ 
+			var index = tmp.indexOf(componentName);
+			if(index > -1){
+				tmp.splice(index, 1);
+			} else {
+				tmp.push(componentName);
+			}
+		} else {
+			tmp.push(componentName);
+		}
+		this.setState({render:tmp});
 	}
 
 	_renderSubComp(){
-        switch(this.state.render){
-            case 'draw': return <Draw/>
-            case 'switch' : return <Switcher/>
-			case 'symbols' : return <Symbols/>
-			default: return null
-        }
+		var renderedComponents = [];
+		for(let component of this.state.render){
+			switch(component){
+				case 'draw': renderedComponents.push(<Draw/>); break;
+				case 'switch' : renderedComponents.push(<Switcher/>); break;
+				case 'symbols' : renderedComponents.push(<Symbols/>); break;
+			}
+		}
+		return renderedComponents;
     }
 
 	render() {

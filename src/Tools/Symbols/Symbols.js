@@ -8,7 +8,6 @@ class Symbols extends Component {
             border: 'solid 1px #ddd',
             zIndex: 9999
         };
-        console.log("YEAF");
         return (
            <Rnd
                 style={style}
