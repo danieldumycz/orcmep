@@ -1,0 +1,16 @@
+ .map {
+  width: 100%; 
+  height: 100%; 
+  z-index: 0;
+} 
+
+.ol-zoom {
+  left: 0;
+  right: unset;
+  top: 70px;
+  bottom: unset;
+}
+
+.olMapViewport {
+  z-index: 0;
+}

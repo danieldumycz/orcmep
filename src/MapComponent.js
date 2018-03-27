@@ -15,12 +15,6 @@ class MapComponent extends Component {
 			new Tile({
 				source: new OSM
 			}),
-			new Tile({
-				extent: [-13884991, 2870341, -7455066, 6338219],
-				source: new TileArcGISRest({
-					url: 'https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/' + 'Specialty/ESRI_StateCityHighway_USA/MapServer'
-				})
-			})
 		];
 		var map = new Map({
 			layers: layers,
