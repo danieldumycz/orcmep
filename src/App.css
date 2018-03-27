@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
+
 .App {
   text-align: center;
 }
@@ -11,8 +13,15 @@
 .App-header {
   background-color: #222;
   height: 50px;
-  padding: 20px;
+  padding: 10px;
   color: white;
+  font-family: "Shadows Into Light";
+}
+
+.App-header h1 {
+  font-size: 35px;
+  padding: -10px;
+  margin: 0;
 }
 
 .App-title {
@@ -26,31 +35,4 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-a.skiplink {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-a.skiplink:focus {
-  clip: auto;
-  height: auto;
-  width: auto;
-  background-color: #fff;
-  padding: 0.3em;
-}
-#map:focus {
-  outline: #4A74A8 solid 0.15em;
-}
-
-
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
 }
