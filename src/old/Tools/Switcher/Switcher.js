@@ -8,6 +8,7 @@ class Switcher extends Component {
             border: 'solid 1px #ddd',
             zIndex: 9999
         };
+        console.log(this.map);
         return (
            <Rnd
                 style={style}
